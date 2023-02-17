@@ -16,7 +16,7 @@ var methods = make([]unsafe.Pointer, {{len .}})
 
 func init(){
 {{range $idx,$_:= .}}
-	methods[{{$idx}}] = unsafe.Pointer(reflect.ValueOf(makeFuncStub{{$idx}}).Pointer())
+    methods[{{$idx}}] = unsafe.Pointer(reflect.ValueOf(makeFuncStub{{$idx}}).Pointer())
 {{end}}
 }
 
@@ -36,28 +36,28 @@ var asmTemplate = `
 {{range $idx,$_:= .}}
 
 TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|WRAPPER),$312
-	NO_LOCAL_POINTERS
-	LEAQ	LOCAL_REGARGS(SP), R12
-	CALL	runtime·spillArgs(SB)
-	MOVQ	AX, 24(SP)
-    MOVQ	AX, 0(SP)
-    MOVQ	R12, 8(SP)
-    MOVQ	${{$idx}}, 16(SP)
-    CALL	·moveMakeFuncArgPtrsCustom(SB)
-    MOVQ	24(SP), AX
-	MOVQ	AX, 0(SP)
-	LEAQ	argframe+0(FP), AX
-	MOVQ	AX, 8(SP)
-	MOVB	$0, LOCAL_RETVALID(SP)
-	LEAQ	LOCAL_RETVALID(SP), AX
-	MOVQ	AX, 16(SP)
-	LEAQ	LOCAL_REGARGS(SP), AX
-	MOVQ	AX, 24(SP)
-	MOVQ	${{$idx}}, 32(SP)
-	CALL	·callReflectCustom(SB)
-	LEAQ	LOCAL_REGARGS(SP), R12
-	CALL	runtime·unspillArgs(SB)
-	RET
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    ${{$idx}}, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    ${{$idx}}, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
 
 {{end}}
 `

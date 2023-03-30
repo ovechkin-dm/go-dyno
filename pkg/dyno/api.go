@@ -1,3 +1,5 @@
+//go:build go1.19 && amd64
+
 package dyno
 
 import (

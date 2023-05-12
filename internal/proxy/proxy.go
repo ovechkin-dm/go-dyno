@@ -12,20 +12,22 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	if v.Type().Kind() != reflect.Interface {
 		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
 	}
-	var ds = &dynamicStruct{}
+	numMethods := v.NumMethod()
 
+	var ds = &dynamicStruct{}
+	sv := reflect.ValueOf(ds)
+	structValue := (*refValue)(unsafe.Pointer(&sv))
 	ifaceValue := (*iFaceValue)(unsafe.Pointer(&v))
 	instancePtr := unsafe.Pointer(ds)
 	ifaceValue.ptr.word = instancePtr
-	length := v.NumMethod() + 3
-	arr := make([]int64, length)
+
+	arr := make([]int64, numMethods+3)
 	ntab := (*itab)(unsafe.Pointer(&arr[0]))
+	ntab.ityp = ifaceValue.typ
+	ntab.typ = uintptr(unsafe.Pointer(structValue.typ))
 	ifaceValue.ptr.itab = ntab
-	sv := reflect.ValueOf(ds)
-	structValue := (*refValue)(unsafe.Pointer(&sv))
-	ifaceValue.typ = uintptr(unsafe.Pointer(structValue.typ))
 	ds.arr = arr
-	numMethods := v.NumMethod()
+
 	ds.methods = make([]*methodContext, numMethods)
 	for i := 0; i < numMethods; i++ {
 		methodCtx := createMethod(v, ds, handler, i)

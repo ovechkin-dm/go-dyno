@@ -1,3 +1,3 @@
 module github.com/ovechkin-dm/go-dyno
 
-go 1.19
+go 1.20

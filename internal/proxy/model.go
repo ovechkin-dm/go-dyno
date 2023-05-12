@@ -30,6 +30,7 @@ type itab struct {
 
 type dynamicStruct struct {
 	methods []*methodContext
+	arr     []int64
 }
 
 type methodContext struct {

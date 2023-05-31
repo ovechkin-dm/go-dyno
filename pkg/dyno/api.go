@@ -1,4 +1,4 @@
-//go:build go1.19 && amd64
+//go:build go1.17 && amd64
 
 package dyno
 

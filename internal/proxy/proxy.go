@@ -21,12 +21,12 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	instancePtr := unsafe.Pointer(ds)
 	ifaceValue.ptr.word = instancePtr
 
-	arr := make([]int64, numMethods+3)
+	arr := make([]int64, unsafe.Sizeof(itab{}))
+	ds.arr = arr
 	ntab := (*itab)(unsafe.Pointer(&arr[0]))
 	ntab.ityp = ifaceValue.typ
 	ntab.typ = uintptr(unsafe.Pointer(structValue.typ))
 	ifaceValue.ptr.itab = ntab
-	ds.arr = arr
 
 	ds.methods = make([]*methodContext, numMethods)
 	for i := 0; i < numMethods; i++ {

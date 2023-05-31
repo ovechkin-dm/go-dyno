@@ -1,6 +1,6 @@
 ## go-dyno
 
-### Dynamic proxy for golang >= 1.17
+### Dynamic proxy for golang >= 1.18
 
 ![go-dyno](https://user-images.githubusercontent.com/6629797/219674966-bab33ecb-24b1-4a23-9d9f-8928e46f8bb7.png)
 

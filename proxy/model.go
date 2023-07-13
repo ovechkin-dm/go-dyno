@@ -28,9 +28,10 @@ type itab struct {
 	fun  [210]unsafe.Pointer
 }
 
-type dynamicStruct struct {
-	methods []*methodContext
-	arr     []int64
+type DynamicStruct struct {
+	IfaceType reflect.Type
+	methods   []*methodContext
+	arr       []int64
 }
 
 type methodContext struct {

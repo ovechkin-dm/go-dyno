@@ -14,7 +14,9 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	}
 	numMethods := v.NumMethod()
 
-	var ds = &dynamicStruct{}
+	var ds = &DynamicStruct{
+		IfaceType: v.Type(),
+	}
 	sv := reflect.ValueOf(ds)
 	structValue := (*refValue)(unsafe.Pointer(&sv))
 	ifaceValue := (*iFaceValue)(unsafe.Pointer(&v))
@@ -40,7 +42,7 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 
 func createMethod(
 	ifaceValue reflect.Value,
-	d *dynamicStruct,
+	d *DynamicStruct,
 	handler func(m *MethodInfo, values []reflect.Value) []reflect.Value, num int,
 ) *methodContext {
 	methodValue := ifaceValue.Method(num)

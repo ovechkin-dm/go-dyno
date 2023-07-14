@@ -19,21 +19,21 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	}
 	sv := reflect.ValueOf(ds)
 	structValue := (*refValue)(unsafe.Pointer(&sv))
-	ifaceValue := (*iFaceValue)(unsafe.Pointer(&v))
+	ifaceValue := (*IFaceValue)(unsafe.Pointer(&v))
 	instancePtr := unsafe.Pointer(ds)
-	ifaceValue.ptr.word = instancePtr
+	ifaceValue.Ptr.Word = instancePtr
 
 	arr := make([]int64, unsafe.Sizeof(itab{}))
 	ds.arr = arr
 	ntab := (*itab)(unsafe.Pointer(&arr[0]))
-	ntab.ityp = ifaceValue.typ
+	ntab.ityp = ifaceValue.Typ
 	ntab.typ = uintptr(unsafe.Pointer(structValue.typ))
-	ifaceValue.ptr.itab = ntab
+	ifaceValue.Ptr.Itab = ntab
 
 	ds.methods = make([]*methodContext, numMethods)
 	for i := 0; i < numMethods; i++ {
 		methodCtx := createMethod(v, ds, handler, i)
-		ifaceValue.ptr.itab.fun[i] = unsafe.Pointer(reflect.ValueOf(methods[i]).Pointer())
+		ifaceValue.Ptr.Itab.fun[i] = unsafe.Pointer(reflect.ValueOf(methods[i]).Pointer())
 		ds.methods[i] = methodCtx
 	}
 

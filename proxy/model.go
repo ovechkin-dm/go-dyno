@@ -9,15 +9,15 @@ type StructValue struct {
 	typ uintptr
 }
 
-type iFaceValue struct {
-	typ  uintptr
-	ptr  *nonEmptyInterface
-	flag uintptr
+type IFaceValue struct {
+	Typ  uintptr
+	Ptr  *NonEmptyInterface
+	Flag uintptr
 }
 
-type nonEmptyInterface struct {
-	itab *itab
-	word unsafe.Pointer
+type NonEmptyInterface struct {
+	Itab *itab
+	Word unsafe.Pointer
 }
 
 type itab struct {

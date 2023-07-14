@@ -29,9 +29,9 @@ type itab struct {
 }
 
 type DynamicStruct struct {
-	IfaceType reflect.Type
-	methods   []*methodContext
-	arr       []int64
+	methods    []*methodContext
+	arr        []int64
+	IFaceValue reflect.Value
 }
 
 type methodContext struct {

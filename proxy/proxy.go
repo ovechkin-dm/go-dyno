@@ -15,7 +15,7 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	numMethods := v.NumMethod()
 
 	var ds = &DynamicStruct{
-		IfaceType: v.Type(),
+		IFaceValue: v,
 	}
 	sv := reflect.ValueOf(ds)
 	structValue := (*refValue)(unsafe.Pointer(&sv))

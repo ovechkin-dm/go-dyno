@@ -21,12 +21,12 @@ TEXT ·makeFuncStub0(SB),(NOSPLIT|WRAPPER),$312
     MOVQ    AX, 0(SP)
     LEAQ    argframe+0(FP), AX
     MOVQ    AX, 8(SP)
-    MOVQ    $0, 32(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
     MOVQ    AX, 16(SP)
     LEAQ    LOCAL_REGARGS(SP), AX
     MOVQ    AX, 24(SP)
+    MOVQ    $0, 32(SP)
     CALL    ·callReflectCustom(SB)
     LEAQ    LOCAL_REGARGS(SP), R12
     CALL    runtime·unspillArgs(SB)

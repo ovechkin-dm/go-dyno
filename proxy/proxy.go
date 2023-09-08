@@ -9,17 +9,18 @@ import (
 func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()
+	ifaceValue := (*IFaceValue)(unsafe.Pointer(&v))
 	if v.Type().Kind() != reflect.Interface {
 		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
 	}
 	numMethods := v.NumMethod()
 
 	var ds = &DynamicStruct{
-		IFaceValue: v,
+		IFaceValue:       v,
+		IFaceValueSource: ifaceValue,
 	}
 	sv := reflect.ValueOf(ds)
-	structValue := (*refValue)(unsafe.Pointer(&sv))
-	ifaceValue := (*IFaceValue)(unsafe.Pointer(&v))
+	st := (*refValue)(unsafe.Pointer(&sv)).typ
 	instancePtr := unsafe.Pointer(ds)
 	ifaceValue.Ptr.Word = instancePtr
 
@@ -27,7 +28,7 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	ds.arr = arr
 	ntab := (*itab)(unsafe.Pointer(&arr[0]))
 	ntab.ityp = ifaceValue.Typ
-	ntab.typ = uintptr(unsafe.Pointer(structValue.typ))
+	ntab.typ = uintptr(unsafe.Pointer(st))
 	ifaceValue.Ptr.Itab = ntab
 
 	ds.methods = make([]*methodContext, numMethods)
@@ -73,6 +74,7 @@ func createMethod(
 	result := &methodContext{
 		fn: mfi,
 		tp: tp,
+		rv: rv,
 	}
 	return result
 }

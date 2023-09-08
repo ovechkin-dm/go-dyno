@@ -29,14 +29,16 @@ type itab struct {
 }
 
 type DynamicStruct struct {
-	methods    []*methodContext
-	arr        []int64
-	IFaceValue reflect.Value
+	methods          []*methodContext
+	arr              []int64
+	IFaceValue       reflect.Value
+	IFaceValueSource *IFaceValue
 }
 
 type methodContext struct {
 	fn *makeFuncImpl
 	tp reflect.Type
+	rv reflect.Value
 }
 
 type MethodInfo struct {

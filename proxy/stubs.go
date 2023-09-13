@@ -11,7 +11,7 @@ func moveMakeFuncArgPtrs(ctxt *makeFuncCtxt, args unsafe.Pointer)
 func callReflect(ctxt *makeFuncImpl, frame unsafe.Pointer, retValid *bool, regs unsafe.Pointer)
 
 func callReflectCustom(ctxt *DynamicStruct, frame unsafe.Pointer, retValid *bool, regs unsafe.Pointer, num int) {
-	p := unsafe.Pointer(uintptr(frame) + 8)
+	p := unsafe.Pointer(uintptr(frame) + 16)
 	callReflect(ctxt.methods[num].fn, p, retValid, regs)
 }
 

@@ -19,8 +19,7 @@ TEXT ·makeFuncStub0(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -46,8 +45,7 @@ TEXT ·makeFuncStub1(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -73,8 +71,7 @@ TEXT ·makeFuncStub2(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -100,8 +97,7 @@ TEXT ·makeFuncStub3(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -127,8 +123,7 @@ TEXT ·makeFuncStub4(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -154,8 +149,7 @@ TEXT ·makeFuncStub5(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -181,8 +175,7 @@ TEXT ·makeFuncStub6(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -208,8 +201,7 @@ TEXT ·makeFuncStub7(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -235,8 +227,7 @@ TEXT ·makeFuncStub8(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -262,8 +253,7 @@ TEXT ·makeFuncStub9(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -289,8 +279,7 @@ TEXT ·makeFuncStub10(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -316,8 +305,7 @@ TEXT ·makeFuncStub11(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -343,8 +331,7 @@ TEXT ·makeFuncStub12(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -370,8 +357,7 @@ TEXT ·makeFuncStub13(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -397,8 +383,7 @@ TEXT ·makeFuncStub14(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -424,8 +409,7 @@ TEXT ·makeFuncStub15(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -451,8 +435,7 @@ TEXT ·makeFuncStub16(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -478,8 +461,7 @@ TEXT ·makeFuncStub17(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -505,8 +487,7 @@ TEXT ·makeFuncStub18(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -532,8 +513,7 @@ TEXT ·makeFuncStub19(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -559,8 +539,7 @@ TEXT ·makeFuncStub20(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -586,8 +565,7 @@ TEXT ·makeFuncStub21(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -613,8 +591,7 @@ TEXT ·makeFuncStub22(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -640,8 +617,7 @@ TEXT ·makeFuncStub23(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -667,8 +643,7 @@ TEXT ·makeFuncStub24(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -694,8 +669,7 @@ TEXT ·makeFuncStub25(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -721,8 +695,7 @@ TEXT ·makeFuncStub26(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -748,8 +721,7 @@ TEXT ·makeFuncStub27(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -775,8 +747,7 @@ TEXT ·makeFuncStub28(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -802,8 +773,7 @@ TEXT ·makeFuncStub29(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -829,8 +799,7 @@ TEXT ·makeFuncStub30(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -856,8 +825,7 @@ TEXT ·makeFuncStub31(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -883,8 +851,7 @@ TEXT ·makeFuncStub32(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -910,8 +877,7 @@ TEXT ·makeFuncStub33(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -937,8 +903,7 @@ TEXT ·makeFuncStub34(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -964,8 +929,7 @@ TEXT ·makeFuncStub35(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -991,8 +955,7 @@ TEXT ·makeFuncStub36(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1018,8 +981,7 @@ TEXT ·makeFuncStub37(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1045,8 +1007,7 @@ TEXT ·makeFuncStub38(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1072,8 +1033,7 @@ TEXT ·makeFuncStub39(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1099,8 +1059,7 @@ TEXT ·makeFuncStub40(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1126,8 +1085,7 @@ TEXT ·makeFuncStub41(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1153,8 +1111,7 @@ TEXT ·makeFuncStub42(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1180,8 +1137,7 @@ TEXT ·makeFuncStub43(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1207,8 +1163,7 @@ TEXT ·makeFuncStub44(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1234,8 +1189,7 @@ TEXT ·makeFuncStub45(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1261,8 +1215,7 @@ TEXT ·makeFuncStub46(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1288,8 +1241,7 @@ TEXT ·makeFuncStub47(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1315,8 +1267,7 @@ TEXT ·makeFuncStub48(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1342,8 +1293,7 @@ TEXT ·makeFuncStub49(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1369,8 +1319,7 @@ TEXT ·makeFuncStub50(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1396,8 +1345,7 @@ TEXT ·makeFuncStub51(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1423,8 +1371,7 @@ TEXT ·makeFuncStub52(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1450,8 +1397,7 @@ TEXT ·makeFuncStub53(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1477,8 +1423,7 @@ TEXT ·makeFuncStub54(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1504,8 +1449,7 @@ TEXT ·makeFuncStub55(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1531,8 +1475,7 @@ TEXT ·makeFuncStub56(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1558,8 +1501,7 @@ TEXT ·makeFuncStub57(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1585,8 +1527,7 @@ TEXT ·makeFuncStub58(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1612,8 +1553,7 @@ TEXT ·makeFuncStub59(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1639,8 +1579,7 @@ TEXT ·makeFuncStub60(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1666,8 +1605,7 @@ TEXT ·makeFuncStub61(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1693,8 +1631,7 @@ TEXT ·makeFuncStub62(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1720,8 +1657,7 @@ TEXT ·makeFuncStub63(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1747,8 +1683,7 @@ TEXT ·makeFuncStub64(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1774,8 +1709,7 @@ TEXT ·makeFuncStub65(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1801,8 +1735,7 @@ TEXT ·makeFuncStub66(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1828,8 +1761,7 @@ TEXT ·makeFuncStub67(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1855,8 +1787,7 @@ TEXT ·makeFuncStub68(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1882,8 +1813,7 @@ TEXT ·makeFuncStub69(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1909,8 +1839,7 @@ TEXT ·makeFuncStub70(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1936,8 +1865,7 @@ TEXT ·makeFuncStub71(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1963,8 +1891,7 @@ TEXT ·makeFuncStub72(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -1990,8 +1917,7 @@ TEXT ·makeFuncStub73(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2017,8 +1943,7 @@ TEXT ·makeFuncStub74(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2044,8 +1969,7 @@ TEXT ·makeFuncStub75(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2071,8 +1995,7 @@ TEXT ·makeFuncStub76(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2098,8 +2021,7 @@ TEXT ·makeFuncStub77(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2125,8 +2047,7 @@ TEXT ·makeFuncStub78(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2152,8 +2073,7 @@ TEXT ·makeFuncStub79(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2179,8 +2099,7 @@ TEXT ·makeFuncStub80(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2206,8 +2125,7 @@ TEXT ·makeFuncStub81(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2233,8 +2151,7 @@ TEXT ·makeFuncStub82(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2260,8 +2177,7 @@ TEXT ·makeFuncStub83(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2287,8 +2203,7 @@ TEXT ·makeFuncStub84(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2314,8 +2229,7 @@ TEXT ·makeFuncStub85(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2341,8 +2255,7 @@ TEXT ·makeFuncStub86(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2368,8 +2281,7 @@ TEXT ·makeFuncStub87(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2395,8 +2307,7 @@ TEXT ·makeFuncStub88(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2422,8 +2333,7 @@ TEXT ·makeFuncStub89(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2449,8 +2359,7 @@ TEXT ·makeFuncStub90(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2476,8 +2385,7 @@ TEXT ·makeFuncStub91(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2503,8 +2411,7 @@ TEXT ·makeFuncStub92(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2530,8 +2437,7 @@ TEXT ·makeFuncStub93(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2557,8 +2463,7 @@ TEXT ·makeFuncStub94(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2584,8 +2489,7 @@ TEXT ·makeFuncStub95(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2611,8 +2515,7 @@ TEXT ·makeFuncStub96(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2638,8 +2541,7 @@ TEXT ·makeFuncStub97(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2665,8 +2567,7 @@ TEXT ·makeFuncStub98(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2692,8 +2593,7 @@ TEXT ·makeFuncStub99(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2719,8 +2619,7 @@ TEXT ·makeFuncStub100(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2746,8 +2645,7 @@ TEXT ·makeFuncStub101(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2773,8 +2671,7 @@ TEXT ·makeFuncStub102(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2800,8 +2697,7 @@ TEXT ·makeFuncStub103(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2827,8 +2723,7 @@ TEXT ·makeFuncStub104(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2854,8 +2749,7 @@ TEXT ·makeFuncStub105(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2881,8 +2775,7 @@ TEXT ·makeFuncStub106(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2908,8 +2801,7 @@ TEXT ·makeFuncStub107(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2935,8 +2827,7 @@ TEXT ·makeFuncStub108(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2962,8 +2853,7 @@ TEXT ·makeFuncStub109(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -2989,8 +2879,7 @@ TEXT ·makeFuncStub110(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3016,8 +2905,7 @@ TEXT ·makeFuncStub111(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3043,8 +2931,7 @@ TEXT ·makeFuncStub112(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3070,8 +2957,7 @@ TEXT ·makeFuncStub113(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3097,8 +2983,7 @@ TEXT ·makeFuncStub114(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3124,8 +3009,7 @@ TEXT ·makeFuncStub115(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3151,8 +3035,7 @@ TEXT ·makeFuncStub116(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3178,8 +3061,7 @@ TEXT ·makeFuncStub117(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3205,8 +3087,7 @@ TEXT ·makeFuncStub118(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3232,8 +3113,7 @@ TEXT ·makeFuncStub119(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3259,8 +3139,7 @@ TEXT ·makeFuncStub120(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3286,8 +3165,7 @@ TEXT ·makeFuncStub121(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3313,8 +3191,7 @@ TEXT ·makeFuncStub122(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3340,8 +3217,7 @@ TEXT ·makeFuncStub123(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3367,8 +3243,7 @@ TEXT ·makeFuncStub124(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3394,8 +3269,7 @@ TEXT ·makeFuncStub125(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3421,8 +3295,7 @@ TEXT ·makeFuncStub126(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3448,8 +3321,7 @@ TEXT ·makeFuncStub127(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3475,8 +3347,7 @@ TEXT ·makeFuncStub128(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3502,8 +3373,7 @@ TEXT ·makeFuncStub129(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3529,8 +3399,7 @@ TEXT ·makeFuncStub130(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3556,8 +3425,7 @@ TEXT ·makeFuncStub131(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3583,8 +3451,7 @@ TEXT ·makeFuncStub132(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3610,8 +3477,7 @@ TEXT ·makeFuncStub133(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3637,8 +3503,7 @@ TEXT ·makeFuncStub134(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3664,8 +3529,7 @@ TEXT ·makeFuncStub135(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3691,8 +3555,7 @@ TEXT ·makeFuncStub136(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3718,8 +3581,7 @@ TEXT ·makeFuncStub137(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3745,8 +3607,7 @@ TEXT ·makeFuncStub138(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3772,8 +3633,7 @@ TEXT ·makeFuncStub139(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3799,8 +3659,7 @@ TEXT ·makeFuncStub140(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3826,8 +3685,7 @@ TEXT ·makeFuncStub141(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3853,8 +3711,7 @@ TEXT ·makeFuncStub142(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3880,8 +3737,7 @@ TEXT ·makeFuncStub143(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3907,8 +3763,7 @@ TEXT ·makeFuncStub144(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3934,8 +3789,7 @@ TEXT ·makeFuncStub145(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3961,8 +3815,7 @@ TEXT ·makeFuncStub146(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -3988,8 +3841,7 @@ TEXT ·makeFuncStub147(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4015,8 +3867,7 @@ TEXT ·makeFuncStub148(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4042,8 +3893,7 @@ TEXT ·makeFuncStub149(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4069,8 +3919,7 @@ TEXT ·makeFuncStub150(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4096,8 +3945,7 @@ TEXT ·makeFuncStub151(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4123,8 +3971,7 @@ TEXT ·makeFuncStub152(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4150,8 +3997,7 @@ TEXT ·makeFuncStub153(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4177,8 +4023,7 @@ TEXT ·makeFuncStub154(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4204,8 +4049,7 @@ TEXT ·makeFuncStub155(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4231,8 +4075,7 @@ TEXT ·makeFuncStub156(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4258,8 +4101,7 @@ TEXT ·makeFuncStub157(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4285,8 +4127,7 @@ TEXT ·makeFuncStub158(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4312,8 +4153,7 @@ TEXT ·makeFuncStub159(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4339,8 +4179,7 @@ TEXT ·makeFuncStub160(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4366,8 +4205,7 @@ TEXT ·makeFuncStub161(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4393,8 +4231,7 @@ TEXT ·makeFuncStub162(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4420,8 +4257,7 @@ TEXT ·makeFuncStub163(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4447,8 +4283,7 @@ TEXT ·makeFuncStub164(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4474,8 +4309,7 @@ TEXT ·makeFuncStub165(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4501,8 +4335,7 @@ TEXT ·makeFuncStub166(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4528,8 +4361,7 @@ TEXT ·makeFuncStub167(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4555,8 +4387,7 @@ TEXT ·makeFuncStub168(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4582,8 +4413,7 @@ TEXT ·makeFuncStub169(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4609,8 +4439,7 @@ TEXT ·makeFuncStub170(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4636,8 +4465,7 @@ TEXT ·makeFuncStub171(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4663,8 +4491,7 @@ TEXT ·makeFuncStub172(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4690,8 +4517,7 @@ TEXT ·makeFuncStub173(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4717,8 +4543,7 @@ TEXT ·makeFuncStub174(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4744,8 +4569,7 @@ TEXT ·makeFuncStub175(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4771,8 +4595,7 @@ TEXT ·makeFuncStub176(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4798,8 +4621,7 @@ TEXT ·makeFuncStub177(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4825,8 +4647,7 @@ TEXT ·makeFuncStub178(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4852,8 +4673,7 @@ TEXT ·makeFuncStub179(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4879,8 +4699,7 @@ TEXT ·makeFuncStub180(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4906,8 +4725,7 @@ TEXT ·makeFuncStub181(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4933,8 +4751,7 @@ TEXT ·makeFuncStub182(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4960,8 +4777,7 @@ TEXT ·makeFuncStub183(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -4987,8 +4803,7 @@ TEXT ·makeFuncStub184(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5014,8 +4829,7 @@ TEXT ·makeFuncStub185(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5041,8 +4855,7 @@ TEXT ·makeFuncStub186(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5068,8 +4881,7 @@ TEXT ·makeFuncStub187(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5095,8 +4907,7 @@ TEXT ·makeFuncStub188(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5122,8 +4933,7 @@ TEXT ·makeFuncStub189(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5149,8 +4959,7 @@ TEXT ·makeFuncStub190(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5176,8 +4985,7 @@ TEXT ·makeFuncStub191(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5203,8 +5011,7 @@ TEXT ·makeFuncStub192(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5230,8 +5037,7 @@ TEXT ·makeFuncStub193(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5257,8 +5063,7 @@ TEXT ·makeFuncStub194(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5284,8 +5089,7 @@ TEXT ·makeFuncStub195(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5311,8 +5115,7 @@ TEXT ·makeFuncStub196(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5338,8 +5141,7 @@ TEXT ·makeFuncStub197(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5365,8 +5167,7 @@ TEXT ·makeFuncStub198(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX
@@ -5392,8 +5193,7 @@ TEXT ·makeFuncStub199(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX

@@ -75,11 +75,10 @@ TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|WRAPPER),$432
 	NO_LOCAL_POINTERS
 	ADD	$LOCAL_REGARGS, RSP, R20
 	CALL	runtime·spillArgs(SB)
+	MOVD    R20, 16(RSP)
 	MOVD	R0, 8(RSP)	
 	MOVD    ${{$idx}}, R26
-	MOVD    R26, 24(RSP)
-	MOVD    LOCAL_REGARGS(RSP), R26
-	MOVD    R26, 16(RSP)
+	MOVD    R26, 24(RSP)	
 	CALL	·moveMakeFuncArgPtrsCustom(SB)
 	MOVD	$argframe+0(FP), R3	
 	MOVD	R3, 16(RSP)

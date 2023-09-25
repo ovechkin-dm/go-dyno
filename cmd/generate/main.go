@@ -46,8 +46,7 @@ TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|WRAPPER),$312
     CALL    ·moveMakeFuncArgPtrsCustom(SB)
     MOVQ    24(SP), AX
     MOVQ    AX, 0(SP)
-    LEAQ    argframe+0(FP), AX
-	ADDQ    $16, AX
+    LEAQ    argframe+0(FP), AX	
     MOVQ    AX, 8(SP)
     MOVB    $0, LOCAL_RETVALID(SP)
     LEAQ    LOCAL_RETVALID(SP), AX

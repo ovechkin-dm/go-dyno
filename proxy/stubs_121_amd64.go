@@ -1,3 +1,5 @@
+//go:build amd64 && go1.21
+
 package proxy
 
 import (
@@ -11,7 +13,8 @@ func moveMakeFuncArgPtrs(ctxt *makeFuncCtxt, args unsafe.Pointer)
 func callReflect(ctxt *makeFuncImpl, frame unsafe.Pointer, retValid *bool, regs unsafe.Pointer)
 
 func callReflectCustom(ctxt *DynamicStruct, frame unsafe.Pointer, retValid *bool, regs unsafe.Pointer, num int) {
-	callReflect(ctxt.methods[num].fn, frame, retValid, regs)
+	fp := unsafe.Pointer(uintptr(frame) + 16)
+	callReflect(ctxt.methods[num].fn, fp, retValid, regs)
 }
 
 func moveMakeFuncArgPtrsCustom(ctxt *DynamicStruct, args unsafe.Pointer, num int) {

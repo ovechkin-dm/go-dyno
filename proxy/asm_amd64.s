@@ -5207,3 +5207,1303 @@ TEXT ·makeFuncStub199(SB),(NOSPLIT|WRAPPER),$312
     RET
 
 
+
+TEXT ·makeFuncStub200(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $200, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $200, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub201(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $201, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $201, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub202(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $202, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $202, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub203(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $203, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $203, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub204(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $204, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $204, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub205(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $205, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $205, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub206(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $206, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $206, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub207(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $207, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $207, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub208(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $208, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $208, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub209(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $209, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $209, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub210(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $210, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $210, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub211(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $211, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $211, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub212(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $212, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $212, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub213(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $213, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $213, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub214(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $214, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $214, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub215(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $215, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $215, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub216(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $216, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $216, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub217(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $217, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $217, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub218(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $218, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $218, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub219(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $219, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $219, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub220(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $220, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $220, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub221(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $221, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $221, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub222(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $222, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $222, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub223(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $223, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $223, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub224(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $224, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $224, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub225(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $225, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $225, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub226(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $226, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $226, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub227(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $227, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $227, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub228(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $228, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $228, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub229(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $229, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $229, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub230(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $230, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $230, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub231(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $231, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $231, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub232(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $232, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $232, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub233(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $233, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $233, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub234(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $234, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $234, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub235(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $235, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $235, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub236(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $236, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $236, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub237(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $237, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $237, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub238(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $238, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $238, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub239(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $239, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $239, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub240(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $240, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $240, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub241(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $241, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $241, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub242(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $242, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $242, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub243(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $243, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $243, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub244(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $244, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $244, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub245(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $245, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $245, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub246(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $246, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $246, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub247(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $247, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $247, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub248(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $248, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $248, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+
+
+TEXT ·makeFuncStub249(SB),(NOSPLIT|WRAPPER),$312
+    NO_LOCAL_POINTERS
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·spillArgs(SB)
+    MOVQ    AX, 24(SP)
+    MOVQ    AX, 0(SP)
+    MOVQ    R12, 8(SP)
+    MOVQ    $249, 16(SP)
+    CALL    ·moveMakeFuncArgPtrsCustom(SB)
+    MOVQ    24(SP), AX
+    MOVQ    AX, 0(SP)
+    LEAQ    argframe+0(FP), AX	
+    MOVQ    AX, 8(SP)
+    MOVB    $0, LOCAL_RETVALID(SP)
+    LEAQ    LOCAL_RETVALID(SP), AX
+    MOVQ    AX, 16(SP)
+    LEAQ    LOCAL_REGARGS(SP), AX
+    MOVQ    AX, 24(SP)
+    MOVQ    $249, 32(SP)
+    CALL    ·callReflectCustom(SB)
+    LEAQ    LOCAL_REGARGS(SP), R12
+    CALL    runtime·unspillArgs(SB)
+    RET
+
+

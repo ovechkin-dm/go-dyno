@@ -4,7 +4,7 @@ package proxy
 import "unsafe"
 import "reflect"
 
-var methods = make([]unsafe.Pointer, 200)
+var methods = make([]unsafe.Pointer, 250)
 
 func init(){
 
@@ -408,6 +408,106 @@ func init(){
 
     methods[199] = unsafe.Pointer(reflect.ValueOf(makeFuncStub199).Pointer())
 
+    methods[200] = unsafe.Pointer(reflect.ValueOf(makeFuncStub200).Pointer())
+
+    methods[201] = unsafe.Pointer(reflect.ValueOf(makeFuncStub201).Pointer())
+
+    methods[202] = unsafe.Pointer(reflect.ValueOf(makeFuncStub202).Pointer())
+
+    methods[203] = unsafe.Pointer(reflect.ValueOf(makeFuncStub203).Pointer())
+
+    methods[204] = unsafe.Pointer(reflect.ValueOf(makeFuncStub204).Pointer())
+
+    methods[205] = unsafe.Pointer(reflect.ValueOf(makeFuncStub205).Pointer())
+
+    methods[206] = unsafe.Pointer(reflect.ValueOf(makeFuncStub206).Pointer())
+
+    methods[207] = unsafe.Pointer(reflect.ValueOf(makeFuncStub207).Pointer())
+
+    methods[208] = unsafe.Pointer(reflect.ValueOf(makeFuncStub208).Pointer())
+
+    methods[209] = unsafe.Pointer(reflect.ValueOf(makeFuncStub209).Pointer())
+
+    methods[210] = unsafe.Pointer(reflect.ValueOf(makeFuncStub210).Pointer())
+
+    methods[211] = unsafe.Pointer(reflect.ValueOf(makeFuncStub211).Pointer())
+
+    methods[212] = unsafe.Pointer(reflect.ValueOf(makeFuncStub212).Pointer())
+
+    methods[213] = unsafe.Pointer(reflect.ValueOf(makeFuncStub213).Pointer())
+
+    methods[214] = unsafe.Pointer(reflect.ValueOf(makeFuncStub214).Pointer())
+
+    methods[215] = unsafe.Pointer(reflect.ValueOf(makeFuncStub215).Pointer())
+
+    methods[216] = unsafe.Pointer(reflect.ValueOf(makeFuncStub216).Pointer())
+
+    methods[217] = unsafe.Pointer(reflect.ValueOf(makeFuncStub217).Pointer())
+
+    methods[218] = unsafe.Pointer(reflect.ValueOf(makeFuncStub218).Pointer())
+
+    methods[219] = unsafe.Pointer(reflect.ValueOf(makeFuncStub219).Pointer())
+
+    methods[220] = unsafe.Pointer(reflect.ValueOf(makeFuncStub220).Pointer())
+
+    methods[221] = unsafe.Pointer(reflect.ValueOf(makeFuncStub221).Pointer())
+
+    methods[222] = unsafe.Pointer(reflect.ValueOf(makeFuncStub222).Pointer())
+
+    methods[223] = unsafe.Pointer(reflect.ValueOf(makeFuncStub223).Pointer())
+
+    methods[224] = unsafe.Pointer(reflect.ValueOf(makeFuncStub224).Pointer())
+
+    methods[225] = unsafe.Pointer(reflect.ValueOf(makeFuncStub225).Pointer())
+
+    methods[226] = unsafe.Pointer(reflect.ValueOf(makeFuncStub226).Pointer())
+
+    methods[227] = unsafe.Pointer(reflect.ValueOf(makeFuncStub227).Pointer())
+
+    methods[228] = unsafe.Pointer(reflect.ValueOf(makeFuncStub228).Pointer())
+
+    methods[229] = unsafe.Pointer(reflect.ValueOf(makeFuncStub229).Pointer())
+
+    methods[230] = unsafe.Pointer(reflect.ValueOf(makeFuncStub230).Pointer())
+
+    methods[231] = unsafe.Pointer(reflect.ValueOf(makeFuncStub231).Pointer())
+
+    methods[232] = unsafe.Pointer(reflect.ValueOf(makeFuncStub232).Pointer())
+
+    methods[233] = unsafe.Pointer(reflect.ValueOf(makeFuncStub233).Pointer())
+
+    methods[234] = unsafe.Pointer(reflect.ValueOf(makeFuncStub234).Pointer())
+
+    methods[235] = unsafe.Pointer(reflect.ValueOf(makeFuncStub235).Pointer())
+
+    methods[236] = unsafe.Pointer(reflect.ValueOf(makeFuncStub236).Pointer())
+
+    methods[237] = unsafe.Pointer(reflect.ValueOf(makeFuncStub237).Pointer())
+
+    methods[238] = unsafe.Pointer(reflect.ValueOf(makeFuncStub238).Pointer())
+
+    methods[239] = unsafe.Pointer(reflect.ValueOf(makeFuncStub239).Pointer())
+
+    methods[240] = unsafe.Pointer(reflect.ValueOf(makeFuncStub240).Pointer())
+
+    methods[241] = unsafe.Pointer(reflect.ValueOf(makeFuncStub241).Pointer())
+
+    methods[242] = unsafe.Pointer(reflect.ValueOf(makeFuncStub242).Pointer())
+
+    methods[243] = unsafe.Pointer(reflect.ValueOf(makeFuncStub243).Pointer())
+
+    methods[244] = unsafe.Pointer(reflect.ValueOf(makeFuncStub244).Pointer())
+
+    methods[245] = unsafe.Pointer(reflect.ValueOf(makeFuncStub245).Pointer())
+
+    methods[246] = unsafe.Pointer(reflect.ValueOf(makeFuncStub246).Pointer())
+
+    methods[247] = unsafe.Pointer(reflect.ValueOf(makeFuncStub247).Pointer())
+
+    methods[248] = unsafe.Pointer(reflect.ValueOf(makeFuncStub248).Pointer())
+
+    methods[249] = unsafe.Pointer(reflect.ValueOf(makeFuncStub249).Pointer())
+
 }
 
 
@@ -810,4 +910,104 @@ func makeFuncStub197()
 func makeFuncStub198()
 
 func makeFuncStub199()
+
+func makeFuncStub200()
+
+func makeFuncStub201()
+
+func makeFuncStub202()
+
+func makeFuncStub203()
+
+func makeFuncStub204()
+
+func makeFuncStub205()
+
+func makeFuncStub206()
+
+func makeFuncStub207()
+
+func makeFuncStub208()
+
+func makeFuncStub209()
+
+func makeFuncStub210()
+
+func makeFuncStub211()
+
+func makeFuncStub212()
+
+func makeFuncStub213()
+
+func makeFuncStub214()
+
+func makeFuncStub215()
+
+func makeFuncStub216()
+
+func makeFuncStub217()
+
+func makeFuncStub218()
+
+func makeFuncStub219()
+
+func makeFuncStub220()
+
+func makeFuncStub221()
+
+func makeFuncStub222()
+
+func makeFuncStub223()
+
+func makeFuncStub224()
+
+func makeFuncStub225()
+
+func makeFuncStub226()
+
+func makeFuncStub227()
+
+func makeFuncStub228()
+
+func makeFuncStub229()
+
+func makeFuncStub230()
+
+func makeFuncStub231()
+
+func makeFuncStub232()
+
+func makeFuncStub233()
+
+func makeFuncStub234()
+
+func makeFuncStub235()
+
+func makeFuncStub236()
+
+func makeFuncStub237()
+
+func makeFuncStub238()
+
+func makeFuncStub239()
+
+func makeFuncStub240()
+
+func makeFuncStub241()
+
+func makeFuncStub242()
+
+func makeFuncStub243()
+
+func makeFuncStub244()
+
+func makeFuncStub245()
+
+func makeFuncStub246()
+
+func makeFuncStub247()
+
+func makeFuncStub248()
+
+func makeFuncStub249()
 

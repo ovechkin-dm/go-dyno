@@ -95,7 +95,7 @@ TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|WRAPPER),$432
 {{end}}
 `
 
-var num = flag.Int("m", 200, "")
+var num = flag.Int("m", 250, "")
 
 func main() {
 	goT := template.Must(template.New("").Parse(goTemplate))

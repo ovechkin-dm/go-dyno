@@ -25,7 +25,7 @@ type itab struct {
 	typ  uintptr
 	hash uint32
 	_    [4]byte
-	fun  [210]unsafe.Pointer
+	fun  [260]unsafe.Pointer
 }
 
 type DynamicStruct struct {

@@ -35,6 +35,16 @@ type DynamicStruct struct {
 	IFaceValueSource *IFaceValue
 }
 
+func UnsafeCast[T any](v *DynamicStruct) T {
+	ifaceInstance := new(T)
+	ii := reflect.ValueOf(ifaceInstance).Elem()
+	ifaceValue := (*IFaceValue)(unsafe.Pointer(&ii))
+	ifaceValue.Ptr = v.IFaceValueSource.Ptr
+	ifaceValue.Flag = v.IFaceValueSource.Flag
+	ifaceValue.Typ = v.IFaceValueSource.Typ
+	return *ifaceInstance
+}
+
 type methodContext struct {
 	fn *makeFuncImpl
 	tp reflect.Type

@@ -1,6 +1,7 @@
 package proxy
 
 import (
+	"fmt"
 	"reflect"
 	"unsafe"
 )
@@ -35,11 +36,16 @@ type DynamicStruct struct {
 	IFaceValueSource *IFaceValue
 }
 
+func (d *DynamicStruct) String() string {
+	return fmt.Sprintf("DynamicProxy[%v]", d.IFaceValue.Type())
+}
+
 func UnsafeCast[T any](v *DynamicStruct) T {
 	ifaceInstance := new(T)
 	ii := reflect.ValueOf(ifaceInstance).Elem()
 	ifaceValue := (*IFaceValue)(unsafe.Pointer(&ii))
-	ifaceValue.Ptr = v.IFaceValueSource.Ptr
+	ifaceValue.Ptr.Word = v.IFaceValueSource.Ptr.Word
+	ifaceValue.Ptr.Itab = v.IFaceValueSource.Ptr.Itab
 	ifaceValue.Flag = v.IFaceValueSource.Flag
 	ifaceValue.Typ = v.IFaceValueSource.Typ
 	return *ifaceInstance

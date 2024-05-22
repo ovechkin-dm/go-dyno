@@ -6,6 +6,49 @@ import (
 	"unsafe"
 )
 
+const DynamicStructFieldName = "DynamicStruct"
+const DelegateFieldName = "Delegate"
+
+func Create2[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect.Value) (T, error) {
+	ifaceInstance := new(T)
+	v := reflect.ValueOf(ifaceInstance).Elem()
+	ifaceValue := (*IFaceValue)(unsafe.Pointer(&v))
+	tp := reflect.StructOf([]reflect.StructField{
+		{
+			Name:      DelegateFieldName,
+			Type:      reflect.ValueOf(ifaceInstance).Elem().Type(),
+			Anonymous: true,
+		},
+		{
+			Name:      DynamicStructFieldName,
+			Type:      reflect.TypeOf(&DynamicStruct{}),
+			Anonymous: false,
+			PkgPath:   reflect.TypeOf(&DynamicStruct{}).PkgPath(),
+		},
+	})
+	s := reflect.New(tp).Elem()
+	if v.Type().Kind() != reflect.Interface {
+		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
+	}
+	abitp := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
+	numMethods := s.NumMethod()
+	x := (*[1 << 16]Method)(addChecked(unsafe.Pointer(&abitp.u), uintptr(abitp.u.Moff)))
+	var ds = &DynamicStruct{
+		IFaceValue:       v,
+		IFaceValueSource: ifaceValue,
+	}
+	ds.methods = make([]*methodContext, numMethods)
+	for i := 0; i < numMethods; i++ {
+		method := createMethod(s, ds, handler, i)
+		offset := resolveReflectText(unsafe.Pointer(reflect.ValueOf(methods[i]).Pointer()))
+		x[i].Tfn = offset
+		x[i].Ifn = offset
+		ds.methods[i] = method
+	}
+	s.FieldByName(DynamicStructFieldName).Set(reflect.ValueOf(ds))
+	return s.Interface().(T), nil
+}
+
 func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()
@@ -77,4 +120,8 @@ func createMethod(
 		rv: rv,
 	}
 	return result
+}
+
+func addChecked(p unsafe.Pointer, x uintptr) unsafe.Pointer {
+	return unsafe.Pointer(uintptr(p) + x)
 }

@@ -8,10 +8,8 @@ import (
 )
 
 type Method struct {
-	Num          int
-	ReflectValue reflect.Value
-	Type         reflect.Method
-	Name         string
+	Type reflect.Method
+	Name string
 }
 
 type ProxyHandler interface {
@@ -21,7 +19,6 @@ type ProxyHandler interface {
 func Dynamic[T any](handler ProxyHandler) (T, error) {
 	return proxy2.Create[T](func(m *proxy2.MethodInfo, values []reflect.Value) []reflect.Value {
 		method := &Method{
-			Num:  m.Num,
 			Type: m.Type,
 			Name: m.Name,
 		}

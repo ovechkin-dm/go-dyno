@@ -12,7 +12,6 @@ const DelegateFieldName = "Delegate"
 func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()
-	ifaceValue := (*IFaceValue)(unsafe.Pointer(&v))
 	tp := reflect.StructOf([]reflect.StructField{
 		{
 			Name:      DelegateFieldName,
@@ -34,15 +33,9 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 	numMethods := s.NumMethod()
 	x := (*[1 << 16]Method)(addChecked(unsafe.Pointer(&abitp.u), uintptr(abitp.u.Moff)))
 	var ds = &DynamicStruct{
-		IFaceValue:       v,
-		IFaceValueSource: ifaceValue,
+		IFaceValue: v,
 	}
 	ds.methods = make([]*methodContext, numMethods)
-
-	//methodMappings := make([]reflect.Method, numMethods)
-	for i := 0; i < numMethods; i++ {
-
-	}
 
 	for i := 0; i < numMethods; i++ {
 		method := createMethod(s, v, ds, handler, i)

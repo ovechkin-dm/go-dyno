@@ -8,10 +8,15 @@ import (
 
 const DynamicStructFieldName = "DynamicStruct"
 const DelegateFieldName = "Delegate"
+const DummyField = "dummy"
 
 func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()
+	if v.Type().Kind() != reflect.Interface {
+		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
+	}
+
 	tp := reflect.StructOf([]reflect.StructField{
 		{
 			Name:      DelegateFieldName,
@@ -22,30 +27,39 @@ func Create[T any](handler func(m *MethodInfo, values []reflect.Value) []reflect
 			Name:      DynamicStructFieldName,
 			Type:      reflect.TypeOf(&DynamicStruct{}),
 			Anonymous: false,
-			PkgPath:   reflect.TypeOf(&DynamicStruct{}).PkgPath(),
+		},
+		{
+			Name:      DummyField,
+			Type:      reflect.ValueOf(ifaceInstance).Elem().Type(),
+			Anonymous: false,
+			PkgPath:   v.Type().PkgPath(),
 		},
 	})
+
 	s := reflect.New(tp).Elem()
-	if v.Type().Kind() != reflect.Interface {
-		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
-	}
-	abitp := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
+
+	abiType := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
+	abiType.u.PkgPath = resolveReflectName(abiType.PkgPath)
+
 	numMethods := s.NumMethod()
-	x := (*[1 << 16]Method)(addChecked(unsafe.Pointer(&abitp.u), uintptr(abitp.u.Moff)))
+	methodPtr := addChecked(unsafe.Pointer(&abiType.u), uintptr(abiType.u.Moff))
+
 	var ds = &DynamicStruct{
 		IFaceValue: v,
 	}
 	ds.methods = make([]*methodContext, numMethods)
-
 	for i := 0; i < numMethods; i++ {
+		curMethod := (*Method)(unsafe.Pointer(unsafe.Sizeof(Method{})*uintptr(i) + uintptr(methodPtr)))
 		method := createMethod(s, v, ds, handler, i)
-		offset := resolveReflectText(unsafe.Pointer(reflect.ValueOf(methods[i]).Pointer()))
-		x[i].Tfn = offset
-		x[i].Ifn = offset
+		offset := resolveReflectText(reflect.ValueOf(methods[i]).UnsafePointer())
+		curMethod.Tfn = offset
+		curMethod.Ifn = offset
 		ds.methods[i] = method
 	}
 	s.FieldByName(DynamicStructFieldName).Set(reflect.ValueOf(ds))
-	return s.Interface().(T), nil
+	result := s.Interface().(T)
+
+	return result, nil
 }
 
 func createMethod(

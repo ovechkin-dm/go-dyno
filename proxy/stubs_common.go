@@ -15,12 +15,17 @@ var stubStructType = reflect.StructOf([]reflect.StructField{
 		Name:      DynamicStructFieldName,
 		Type:      reflect.TypeOf(&DynamicStruct{}),
 		Anonymous: false,
-		PkgPath:   reflect.TypeOf(&DynamicStruct{}).PkgPath(),
+	},
+	{
+		Name:      DummyField,
+		Type:      reflect.TypeOf(&DynamicStruct{}),
+		Anonymous: false,
+		PkgPath:   "dummy",
 	},
 })
 
-//go:linkname resolveTextOff reflect.resolveTextOff
-func resolveTextOff(rtype unsafe.Pointer, off int32) unsafe.Pointer
+//go:linkname resolveReflectName reflect.resolveReflectName
+func resolveReflectName(n Name) int32
 
 //go:linkname resolveReflectText reflect.resolveReflectText
 func resolveReflectText(ptr unsafe.Pointer) int32

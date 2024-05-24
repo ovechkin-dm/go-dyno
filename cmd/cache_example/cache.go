@@ -28,24 +28,24 @@ func (h *Impl) Bar(i int) int {
 
 type CachingProxy struct {
 	delegate interface{}
-	cache    map[int][]reflect.Value
+	cache    map[string][]reflect.Value
 }
 
 func (c *CachingProxy) Handle(method *dyno.Method, values []reflect.Value) []reflect.Value {
-	_, ok := c.cache[method.Num]
+	_, ok := c.cache[method.Name]
 	ref := reflect.ValueOf(c.delegate)
 	if !ok {
-		out := ref.Method(method.Num).Call(values)
-		c.cache[method.Num] = out
+		out := ref.MethodByName(method.Name).Call(values)
+		c.cache[method.Name] = out
 	}
-	return c.cache[method.Num]
+	return c.cache[method.Name]
 
 }
 
 func CreateCachingProxyFor[T any](t T) (T, error) {
 	proxy := &CachingProxy{
 		delegate: t,
-		cache:    make(map[int][]reflect.Value),
+		cache:    make(map[string][]reflect.Value),
 	}
 	return dyno.Dynamic[T](proxy)
 }

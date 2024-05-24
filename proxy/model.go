@@ -58,7 +58,6 @@ type methodContext struct {
 }
 
 type MethodInfo struct {
-	Num          int
 	Name         string
 	ReflectValue reflect.Value
 	Type         reflect.Method

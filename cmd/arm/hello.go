@@ -14,6 +14,9 @@ type Handler struct {
 }
 
 func (h *Handler) Handle(m *dyno.Method, values []reflect.Value) []reflect.Value {
+	for i := 0; i < m.Type.Type.NumIn(); i++ {
+		fmt.Println(m.Type.Type.In(i))
+	}
 	for i := range values {
 		fmt.Println(values[i].Interface())
 	}

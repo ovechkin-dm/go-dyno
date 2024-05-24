@@ -21,10 +21,9 @@ type ProxyHandler interface {
 func Dynamic[T any](handler ProxyHandler) (T, error) {
 	return proxy2.Create[T](func(m *proxy2.MethodInfo, values []reflect.Value) []reflect.Value {
 		method := &Method{
-			Num:          m.Num,
-			ReflectValue: m.ReflectValue,
-			Type:         m.Type,
-			Name:         m.Name,
+			Num:  m.Num,
+			Type: m.Type,
+			Name: m.Name,
 		}
 		return handler.Handle(method, values)
 	})

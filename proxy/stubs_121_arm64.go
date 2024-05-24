@@ -2,3 +2,4 @@
 
 package proxy
 
+const FramePointerOffset = 0

@@ -5,7 +5,6 @@ import (
 	"github.com/ovechkin-dm/go-dyno/pkg/dyno"
 	"reflect"
 	"time"
-	"unsafe"
 )
 
 type Service interface {
@@ -48,25 +47,6 @@ func CreateCachingProxyFor[T any](t T) (T, error) {
 		cache:    make(map[string][]reflect.Value),
 	}
 	return dyno.Dynamic[T](proxy.Handle)
-}
-
-type iFaceValue struct {
-	typ  uintptr
-	ptr  *nonEmptyInterface
-	flag uintptr
-}
-
-type nonEmptyInterface struct {
-	itab *itab
-	word unsafe.Pointer
-}
-
-type itab struct {
-	ityp uintptr
-	typ  uintptr
-	hash uint32
-	_    [4]byte
-	fun  [100000]unsafe.Pointer
 }
 
 func main() {

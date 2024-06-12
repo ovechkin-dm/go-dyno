@@ -2,8 +2,6 @@
 
 ### Dynamic proxy for golang >= 1.18
 
-![go-dyno](https://user-images.githubusercontent.com/6629797/219674966-bab33ecb-24b1-4a23-9d9f-8928e46f8bb7.png)
-
 An attempt to bring java-like dynamic proxy to golang.
 
 You can use dynamic proxies for AOP, logging, caching, metrics and mocking.
@@ -40,26 +38,26 @@ func (h *Impl) Bar(i int) int {
 
 type CachingProxy struct {
 	delegate interface{}
-	cache    map[int][]reflect.Value
+	cache    map[string][]reflect.Value
 }
 
-func (c *CachingProxy) Handle(method *dyno.Method, values []reflect.Value) []reflect.Value {
-	_, ok := c.cache[method.Num]
+func (c *CachingProxy) Handle(method reflect.Method, values []reflect.Value) []reflect.Value {
+	_, ok := c.cache[method.Name]
 	ref := reflect.ValueOf(c.delegate)
 	if !ok {
-		out := ref.Method(method.Num).Call(values)
-		c.cache[method.Num] = out
+		out := ref.MethodByName(method.Name).Call(values)
+		c.cache[method.Name] = out
 	}
-	return c.cache[method.Num]
+	return c.cache[method.Name]
 
 }
 
 func CreateCachingProxyFor[T any](t T) (T, error) {
 	proxy := &CachingProxy{
 		delegate: t,
-		cache:    make(map[int][]reflect.Value),
+		cache:    make(map[string][]reflect.Value),
 	}
-	return dyno.Dynamic[T](proxy)
+	return dyno.Dynamic[T](proxy.Handle)
 }
 
 func main() {
@@ -68,11 +66,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
 	fmt.Println(proxy.Foo("hello"))
 	fmt.Println(proxy.Foo("hello"))
 	fmt.Println(proxy.Foo("hello"))
 }
-
 ```
 
 For golang <= 1.16 you can look at dpig project

@@ -22,12 +22,6 @@ type methodContext struct {
 	rv reflect.Value
 }
 
-type MethodInfo struct {
-	Name         string
-	ReflectValue reflect.Value
-	Type         reflect.Method
-}
-
 type refValue struct {
 	typ  *rtype
 	ptr  unsafe.Pointer

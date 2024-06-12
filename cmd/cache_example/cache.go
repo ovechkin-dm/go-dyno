@@ -31,7 +31,7 @@ type CachingProxy struct {
 	cache    map[string][]reflect.Value
 }
 
-func (c *CachingProxy) Handle(method *dyno.Method, values []reflect.Value) []reflect.Value {
+func (c *CachingProxy) Handle(method reflect.Method, values []reflect.Value) []reflect.Value {
 	_, ok := c.cache[method.Name]
 	ref := reflect.ValueOf(c.delegate)
 	if !ok {
@@ -47,7 +47,7 @@ func CreateCachingProxyFor[T any](t T) (T, error) {
 		delegate: t,
 		cache:    make(map[string][]reflect.Value),
 	}
-	return dyno.Dynamic[T](proxy)
+	return dyno.Dynamic[T](proxy.Handle)
 }
 
 type iFaceValue struct {

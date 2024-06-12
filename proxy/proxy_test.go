@@ -14,7 +14,7 @@ type PrivateIface interface {
 }
 
 func TestCreate(t *testing.T) {
-	v, err := Create[MyInterface](func(m *MethodInfo, values []reflect.Value) []reflect.Value {
+	v, err := Create[MyInterface](func(m reflect.Method, values []reflect.Value) []reflect.Value {
 		return []reflect.Value{reflect.ValueOf(10)}
 	})
 	if err != nil {
@@ -27,7 +27,7 @@ func TestCreate(t *testing.T) {
 }
 
 func TestPrivateIface(t *testing.T) {
-	p, err := Create[PrivateIface](func(m *MethodInfo, values []reflect.Value) []reflect.Value {
+	p, err := Create[PrivateIface](func(m reflect.Method, values []reflect.Value) []reflect.Value {
 		return []reflect.Value{reflect.ValueOf(10)}
 	})
 	if err != nil {

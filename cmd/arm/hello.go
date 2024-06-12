@@ -10,12 +10,9 @@ type Iface interface {
 	Test(i int, j int, a [2]int, f [2]float64) int
 }
 
-type Handler struct {
-}
-
-func (h *Handler) Handle(m *dyno.Method, values []reflect.Value) []reflect.Value {
-	for i := 0; i < m.Type.Type.NumIn(); i++ {
-		fmt.Println(m.Type.Type.In(i))
+func Handle(m reflect.Method, values []reflect.Value) []reflect.Value {
+	for i := 0; i < m.Type.NumIn(); i++ {
+		fmt.Println(m.Type.In(i))
 	}
 	for i := range values {
 		fmt.Println(values[i].Interface())
@@ -25,8 +22,7 @@ func (h *Handler) Handle(m *dyno.Method, values []reflect.Value) []reflect.Value
 
 func main() {
 	fmt.Println("hello, ARM")
-	h := Handler{}
-	p, err := dyno.Dynamic[Iface](&h)
+	p, err := dyno.Dynamic[Iface](Handle)
 	if err != nil {
 		panic(err)
 	}

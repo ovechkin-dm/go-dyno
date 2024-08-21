@@ -2,4 +2,4 @@
 
 package proxy
 
-const FramePointerOffset = 8
+const FramePointerOffset = 2

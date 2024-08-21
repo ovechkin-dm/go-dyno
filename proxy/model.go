@@ -1,50 +1,13 @@
 package proxy
 
 import (
-	"fmt"
-	"reflect"
 	"unsafe"
 )
-
-type DynamicStruct struct {
-	methods    []*methodContext
-	arr        []int64
-	IFaceValue reflect.Value
-}
-
-func (d *DynamicStruct) String() string {
-	return fmt.Sprintf("DynamicProxy[%v]", d.IFaceValue.Type())
-}
-
-type methodContext struct {
-	fn *makeFuncImpl
-	tp reflect.Type
-	rv reflect.Value
-}
 
 type refValue struct {
 	typ  *rtype
 	ptr  unsafe.Pointer
 	flag uintptr
-}
-
-type makeFuncImpl struct {
-	makeFuncCtxt
-	ftyp *funcType
-	fn   func([]reflect.Value) []reflect.Value
-}
-
-type makeFuncCtxt struct {
-	fn      uintptr
-	stack   uintptr
-	argLen  uintptr
-	regPtrs [2]uint8
-}
-
-type funcType struct {
-	rtype
-	inCount  uint16
-	outCount uint16
 }
 
 type rtype struct {

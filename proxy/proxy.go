@@ -6,9 +6,18 @@ import (
 	"unsafe"
 )
 
-const DynamicStructFieldName = "DynamicStruct"
+type Stringer interface {
+	String() string
+}
+
 const DelegateFieldName = "Delegate"
+const StringerFieldName = "Stringer"
 const DummyField = "dummy"
+const MethodsFieldName = "Methods"
+
+const DynamicProxyName = "DynamicProxy"
+
+const StubFrameSize = 5
 
 func Create[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
@@ -19,14 +28,19 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 
 	tp := reflect.StructOf([]reflect.StructField{
 		{
+			Name:      MethodsFieldName,
+			Type:      reflect.ValueOf([]unsafe.Pointer{}).Type(),
+			Anonymous: false,
+		},
+		{
 			Name:      DelegateFieldName,
 			Type:      reflect.ValueOf(ifaceInstance).Elem().Type(),
 			Anonymous: true,
 		},
 		{
-			Name:      DynamicStructFieldName,
-			Type:      reflect.TypeOf(&DynamicStruct{}),
-			Anonymous: false,
+			Name:      StringerFieldName,
+			Type:      reflect.ValueOf(new(Stringer)).Elem().Type(),
+			Anonymous: true,
 		},
 		{
 			Name:      DummyField,
@@ -37,44 +51,43 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 	})
 
 	s := reflect.New(tp).Elem()
+	numMethods := s.NumMethod()
+
+	smethods := make([]unsafe.Pointer, numMethods)
+	s.FieldByName(MethodsFieldName).Set(reflect.ValueOf(smethods))
 
 	abiType := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
 	abiType.u.PkgPath = resolveReflectName(abiType.PkgPath)
+	methodPtr := unsafe.Pointer(uintptr(unsafe.Pointer(&abiType.u)) + uintptr(abiType.u.Moff))
 
-	numMethods := s.NumMethod()
-	methodPtr := addChecked(unsafe.Pointer(&abiType.u), uintptr(abiType.u.Moff))
-
-	var ds = &DynamicStruct{
-		IFaceValue: v,
-	}
-
-	ds.methods = make([]*methodContext, numMethods)
 	structMethods := unsafe.Slice((*Method)(methodPtr), numMethods)
 	for i := range structMethods {
 		curMethod := &structMethods[i]
-		method := createMethod(s, v, ds, handler, i)
-		offset := resolveReflectText(reflect.ValueOf(methods[i]).UnsafePointer())
-		curMethod.Tfn = offset
-		curMethod.Ifn = offset
-		ds.methods[i] = method
-	}
-	s.FieldByName(DynamicStructFieldName).Set(reflect.ValueOf(ds))
-	result := s.Interface().(T)
+		if s.Type().Method(i).Name == "String" {
+			offset := resolveReflectText(reflect.ValueOf(StringRepr).UnsafePointer())
+			curMethod.Tfn = offset
+			curMethod.Ifn = offset
+		} else {
+			method := createMethod(s, v, handler, i)
+			smethods[i] = method
+			offset := resolveReflectText(methods[i])
+			curMethod.Tfn = offset
+			curMethod.Ifn = offset
+		}
 
+	}
+	result := s.Interface().(T)
 	return result, nil
 }
 
-func createMethod(
-	structOfProxy reflect.Value,
-	sourceInterface reflect.Value,
-	d *DynamicStruct,
-	handler func(m reflect.Method, values []reflect.Value) []reflect.Value, num int,
-) *methodContext {
+func createMethod(structOfProxy reflect.Value, sourceInterface reflect.Value, handler func(m reflect.Method, values []reflect.Value) []reflect.Value, num int) unsafe.Pointer {
 	methodValue := structOfProxy.Method(num)
 	tp := methodValue.Type()
-	inArgs := make([]reflect.Type, 0)
+	receiverType := reflect.TypeOf(reflect.TypeOf(uintptr(0)))
+	receiverArgOffsetType := reflect.TypeOf([FramePointerOffset]uintptr{})
+	inArgs := []reflect.Type{receiverType, receiverArgOffsetType}
 	outArgs := make([]reflect.Type, 0)
-	inArgs = append(inArgs, reflect.TypeOf(d))
+
 	for nin := 0; nin < tp.NumIn(); nin++ {
 		inArgs = append(inArgs, tp.In(nin))
 	}
@@ -88,20 +101,14 @@ func createMethod(
 		methodType = structOfProxy.Type().Method(num)
 	}
 	hf := func(values []reflect.Value) []reflect.Value {
-		withoutReceiver := values[1:]
+		withoutReceiver := values[2:]
 		return handler(methodType, withoutReceiver)
 	}
 	rv := reflect.MakeFunc(ftype, hf)
 	ptr := (*refValue)(unsafe.Pointer(&rv))
-	mfi := (*makeFuncImpl)(ptr.ptr)
-	result := &methodContext{
-		fn: mfi,
-		tp: tp,
-		rv: rv,
-	}
-	return result
+	return ptr.ptr
 }
 
-func addChecked(p unsafe.Pointer, x uintptr) unsafe.Pointer {
-	return unsafe.Pointer(uintptr(p) + x)
+func StringRepr() string {
+	return DynamicProxyName
 }

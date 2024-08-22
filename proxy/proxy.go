@@ -17,8 +17,6 @@ const MethodsFieldName = "Methods"
 
 const DynamicProxyName = "DynamicProxy"
 
-const StubFrameSize = 5
-
 func Create[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()

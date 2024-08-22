@@ -37,6 +37,7 @@ var asmTemplate = `
 TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|NOFRAME|WRAPPER),$0
     NO_LOCAL_POINTERS
     MOVQ    0(AX), DX
+	MOVQ    0(DX), DX
     MOVQ    {{mul $idx 8}}(DX), DX
     MOVQ    (DX), AX
     CALL	AX
@@ -54,6 +55,7 @@ var armTemplate = `
 TEXT ·makeFuncStub0(SB),(NOSPLIT|NOFRAME|WRAPPER),$0
     NO_LOCAL_POINTERS
     MOVD    0(R0), R26
+	MOVD    0(R26), R26
     MOVD    {{mul $idx 8}}(R26), R26
     MOVD    (R26), R0
     CALL	R0

@@ -29,7 +29,7 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 	tp := reflect.StructOf([]reflect.StructField{
 		{
 			Name:      MethodsFieldName,
-			Type:      reflect.ValueOf([]unsafe.Pointer{}).Type(),
+			Type:      reflect.ValueOf(&[]unsafe.Pointer{}).Type(),
 			Anonymous: false,
 		},
 		{
@@ -54,7 +54,7 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 	numMethods := s.NumMethod()
 
 	smethods := make([]unsafe.Pointer, numMethods)
-	s.FieldByName(MethodsFieldName).Set(reflect.ValueOf(smethods))
+	s.FieldByName(MethodsFieldName).Set(reflect.ValueOf(&smethods))
 
 	abiType := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
 	abiType.u.PkgPath = resolveReflectName(abiType.PkgPath)

@@ -65,3 +65,17 @@ func TestStackAlign(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestHashable(t *testing.T) {
+	v, err := Create[MyInterface](func(m reflect.Method, values []reflect.Value) []reflect.Value {
+		return []reflect.Value{reflect.ValueOf(10)}
+	})
+	if err != nil {
+		t.Error(err)
+	}
+	m := make(map[any]int)
+	m[v] = 10
+	if m[v] != 10 {
+		t.FailNow()
+	}
+}

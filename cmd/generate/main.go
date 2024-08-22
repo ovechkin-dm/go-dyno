@@ -51,12 +51,12 @@ var armTemplate = `
 #define LOCAL_REGARGS 48
 
 {{range $idx,$_:= .}}
-TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|NOFRAME|WRAPPER),$0
+TEXT ·makeFuncStub0(SB),(NOSPLIT|NOFRAME|WRAPPER),$0
     NO_LOCAL_POINTERS
-    MOVQ    0(AX), DX
-    MOVQ    {{mul $idx 8}}(DX), DX
-    MOVQ    (DX), AX
-    CALL	AX
+    MOVD    0(R0), R26
+    MOVD    {{mul $idx 8}}(R26), R26
+    MOVD    (R26), R0
+    CALL	R0
     RET
 {{end}}
 `

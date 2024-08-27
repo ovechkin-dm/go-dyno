@@ -78,11 +78,16 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 	return result, nil
 }
 
-func createMethod(structOfProxy reflect.Value, sourceInterface reflect.Value, handler func(m reflect.Method, values []reflect.Value) []reflect.Value, num int) unsafe.Pointer {
+func createMethod(
+	structOfProxy reflect.Value,
+	sourceInterface reflect.Value,
+	handler func(m reflect.Method, values []reflect.Value) []reflect.Value,
+	num int,
+) unsafe.Pointer {
 	methodValue := structOfProxy.Method(num)
 	tp := methodValue.Type()
-	receiverType := reflect.TypeOf(reflect.TypeOf(uintptr(0)))
-	receiverArgOffsetType := reflect.TypeOf([FramePointerOffset]uintptr{})
+	receiverType := reflect.TypeOf(reflect.TypeOf(0))
+	receiverArgOffsetType := reflect.TypeOf([FramePointerOffset]int{})
 	inArgs := []reflect.Type{receiverType, receiverArgOffsetType}
 	outArgs := make([]reflect.Type, 0)
 

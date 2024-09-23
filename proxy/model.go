@@ -60,5 +60,4 @@ type Method struct {
 	Tfn  int32
 }
 
-type Empty interface {
-}
+type Empty interface{}

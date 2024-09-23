@@ -39,8 +39,8 @@ TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|NOFRAME|WRAPPER),$0
     MOVQ    0(AX), DX
     MOVQ    0(DX), DX
     MOVQ    {{mul $idx 8}}(DX), DX
-    MOVQ    (DX), AX
-    CALL	AX
+    MOVQ    0(DX), AX
+    CALL    AX
     RET
 {{end}}`
 
@@ -57,8 +57,8 @@ TEXT ·makeFuncStub{{$idx}}(SB),(NOSPLIT|WRAPPER),$0
     MOVD    0(R0), R26
     MOVD    0(R26), R26
     MOVD    {{mul $idx 8}}(R26), R26
-    MOVD    (R26), R0
-    CALL	R0
+    MOVD    0(R26), R0
+    CALL    R0
     RET
 {{end}}
 `
@@ -81,16 +81,24 @@ func main() {
 	}
 	defer mg.Close()
 
-	goT.Execute(mg, make([]struct{}, *num))
+	err = goT.Execute(mg, make([]struct{}, *num))
+	if err != nil {
+		panic(err)
+	}
 
 	amdasmT := template.Must(template.New("").Funcs(funcMap).Parse(asmTemplate))
 	ag2, _ := os.Create("./proxy/asm_amd64.s")
 	defer ag2.Close()
-	amdasmT.Execute(ag2, make([]struct{}, *num))
+	err = amdasmT.Execute(ag2, make([]struct{}, *num))
+	if err != nil {
+		panic(err)
+	}
 
 	armasmT := template.Must(template.New("").Funcs(funcMap).Parse(armTemplate))
 	ag3, _ := os.Create("./proxy/asm_arm64.s")
 	defer ag3.Close()
-	armasmT.Execute(ag3, make([]struct{}, *num))
-
+	err = armasmT.Execute(ag3, make([]struct{}, *num))
+	if err != nil {
+		panic(err)
+	}
 }

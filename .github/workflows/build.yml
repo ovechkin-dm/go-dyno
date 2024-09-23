@@ -1,0 +1,97 @@
+# Workflow file of GitHub Actions
+
+name: build
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scm
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+
+      - name: Lint
+        uses: golangci/golangci-lint-action@v4
+        with:
+          version: v1.56.2
+
+  CodeQL:
+    needs: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scm
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: go
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
+  Test:
+    needs: Lint
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [linux]
+        arch: [ amd64, arm64 ]
+        go: [ '1.20', '1.22', '1.23' ]
+        include:
+          - os: linux
+            runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout scm
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go }}
+
+      - name: 'Test on linux [amd64]'
+        if: ${{ matrix.os == 'linux' && contains(fromJson('["amd64"]'), matrix.arch) }}
+        env:
+          GOOS: ${{ matrix.os }}
+          GOARCH: ${{ matrix.arch }}
+        run: go test -race -v -coverprofile="coverage.txt" -coverpkg=./... ./...
+
+      - name: 'Setup qemu-user-static on [linux] arch [arm64]'
+        if: ${{ matrix.os == 'linux' && contains(fromJson('["arm64"]'), matrix.arch) }}
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install qemu-user-static
+
+      - name: 'Test on [linux] arch [arm64]'
+        if: ${{ matrix.os == 'linux' && contains(fromJson('["arm64"]'), matrix.arch) }}
+        env:
+          GOOS: ${{ matrix.os }}
+          GOARCH: ${{ matrix.arch }}
+        run: go test -coverpkg=./... ./...
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: Codecov on ${{ matrix.os }}/${{ matrix.arch }} go${{ matrix.go }}
+          fail_ci_if_error: false

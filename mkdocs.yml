@@ -1,0 +1,74 @@
+site_name: go-dyno
+site_url: https://ovechkin-dm.github.io/go-dyno/
+site_description: >-
+  Dynamic Proxy for Go
+
+repo_name: ovechkin-dm/go-dyno
+repo_url: https://github.com/ovechkin-dm/go-dyno
+
+theme:
+  name: material
+  icon:
+    logo: fontawesome/brands/golang
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - toc.follow
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+
+nav:
+  - Home: index.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+extra:
+  version:
+    provider: mike
+
+plugins:
+  - glightbox
+  - mike:
+      alias_type: copy
+      canonical_version: latest
+  - open-in-new-tab
+  - search
+  - social

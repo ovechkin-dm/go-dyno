@@ -10,10 +10,12 @@ type Stringer interface {
 	String() string
 }
 
-const DelegateFieldName = "Delegate"
-const StringerFieldName = "Stringer"
-const DummyField = "dummy"
-const MethodsFieldName = "Methods"
+const (
+	DelegateFieldName = "Delegate"
+	StringerFieldName = "Stringer"
+	DummyField        = "dummy"
+	MethodsFieldName  = "Methods"
+)
 
 const DynamicProxyName = "DynamicProxy"
 

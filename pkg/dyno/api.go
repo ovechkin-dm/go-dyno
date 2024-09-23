@@ -3,8 +3,9 @@
 package dyno
 
 import (
-	"github.com/ovechkin-dm/go-dyno/proxy"
 	"reflect"
+
+	"github.com/ovechkin-dm/go-dyno/proxy"
 )
 
 func Dynamic[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value) (T, error) {

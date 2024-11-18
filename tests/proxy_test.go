@@ -2,9 +2,10 @@ package tests
 
 import (
 	"fmt"
-	"github.com/ovechkin-dm/go-dyno/pkg/dyno"
 	"reflect"
 	"testing"
+
+	"github.com/ovechkin-dm/go-dyno/pkg/dyno"
 )
 
 type Foo interface {
@@ -82,7 +83,6 @@ func TestStackAlignment(t *testing.T) {
 	if result != 447 {
 		t.Fatalf("Expected 447, got %d", result)
 	}
-
 }
 
 func TestPrivateIface(t *testing.T) {

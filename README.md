@@ -22,7 +22,7 @@ Install latest version of the library using go get command:
 go get -u github.com/ovechkin-dm/go-dyno
 ```
 
-#Example
+# Example
 
 This is an example of proxy that prints method name before any method invocation of the original instance. 
 

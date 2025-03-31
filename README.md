@@ -1,76 +1,79 @@
-## go-dyno
+# Go-dyno 
 
-### Dynamic proxy for golang >= 1.18
+[![Build Status](https://github.com/ovechkin-dm/go-dyno/actions/workflows/build.yml/badge.svg)](https://github.com/ovechkin-dm/go-dyno/actions)
+[![Codecov](https://codecov.io/gh/ovechkin-dm/go-dyno/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ovechkin-dm/go-dyno)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ovechkin-dm/go-dyno)](https://goreportcard.com/report/github.com/ovechkin-dm/go-dyno)
+[![Documentation](https://pkg.go.dev/badge/github.com/ovechkin-dm/go-dyno.svg)](https://pkg.go.dev/github.com/ovechkin-dm/go-dyno)
+[![Release](https://img.shields.io/github/release/ovechkin-dm/go-dyno.svg)](https://github.com/ovechkin-dm/go-dyno/releases)
+[![License](https://img.shields.io/github/license/ovechkin-dm/go-dyno.svg)](https://github.com/ovechkin-dm/go-dyno/blob/main/LICENSE)
 
-An attempt to bring java-like dynamic proxy to golang.
+# Dynamic proxy for golang
+Go-dyno is a lightweight and flexible library for Go, inspired by Java's dynamic proxy mechanism. It enables dynamic creation of proxy implementations for interfaces at runtime, allowing developers to intercept and customize method calls programmatically. This makes it a powerful tool for building dynamic behaviors and enhancing flexibility in Go applications.
 
-You can use dynamic proxies for AOP, logging, caching, metrics and mocking.
+# Documentation
 
-Basic example of caching proxy:
+Latest documentation is available [here](https://ovechkin-dm.github.io/go-dyno/latest/)
+
+# Quick start
+
+Install latest version of the library using go get command:
+
+```bash
+go get -u github.com/ovechkin-dm/go-dyno
+```
+
+#Example
+
+This is an example of proxy that prints method name before any method invocation of the original instance. 
 
 ```go
 package main
 
 import (
 	"fmt"
-	"github.com/ovechkin-dm/go-dyno/pkg/dyno"
 	"reflect"
-	"time"
+
+	"github.com/ovechkin-dm/go-dyno/pkg/dyno"
 )
 
-type Service interface {
-	Foo(s string) string
-	Bar(i int) int
+type Greeter interface {
+	Greet() string
+	SayHello(name string) string
 }
 
-type Impl struct {
-}
-
-func (h *Impl) Foo(s string) string {
-	time.Sleep(2 * time.Second)
-	return s + " world!"
-}
-
-func (h *Impl) Bar(i int) int {
-	time.Sleep(2 * time.Second)
-	return i + 1
-}
-
-type CachingProxy struct {
-	delegate interface{}
-	cache    map[string][]reflect.Value
-}
-
-func (c *CachingProxy) Handle(method reflect.Method, values []reflect.Value) []reflect.Value {
-	_, ok := c.cache[method.Name]
-	ref := reflect.ValueOf(c.delegate)
-	if !ok {
-		out := ref.MethodByName(method.Name).Call(values)
-		c.cache[method.Name] = out
-	}
-	return c.cache[method.Name]
+type SimpleGreeter struct {
 
 }
 
-func CreateCachingProxyFor[T any](t T) (T, error) {
-	proxy := &CachingProxy{
-		delegate: t,
-		cache:    make(map[string][]reflect.Value),
-	}
-	return dyno.Dynamic[T](proxy.Handle)
+func (g *SimpleGreeter) Greet() string {
+	return "Hello!"
 }
 
-func main() {
-	s := &Impl{}
-	proxy, err := CreateCachingProxyFor[Service](s)
+func (g *SimpleGreeter) SayHello(name string) string {
+	return fmt.Sprintf("Hello, %s!", name)
+}
+
+type ProxyHandler[T any] struct {
+	Impl T
+}
+
+func (p *ProxyHandler[T]) Handle(m reflect.Method, values []reflect.Value) []reflect.Value {
+	fmt.Println("Method called:", m.Name)
+	return reflect.ValueOf(p.Impl).MethodByName(m.Name).Call(values)	
+}
+
+
+
+func main() {	
+	greeter := &SimpleGreeter{}
+	proxyHandler := &ProxyHandler[Greeter]{Impl: greeter}
+	dynamicGreeter, err := dyno.Dynamic[Greeter](proxyHandler.Handle)
 	if err != nil {
-		panic(err)
+		fmt.Println("Error creating dynamic greeter:", err)
+		return
 	}
 
-	fmt.Println(proxy.Foo("hello"))
-	fmt.Println(proxy.Foo("hello"))
-	fmt.Println(proxy.Foo("hello"))
+	fmt.Println(dynamicGreeter.Greet())
+	fmt.Println(dynamicGreeter.SayHello("World"))
 }
 ```
-
-For golang <= 1.16 you can look at dpig project

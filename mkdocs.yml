@@ -52,6 +52,10 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Limitations: limitations.md
+  - Library internals and guarantees: internals.md
+  - Supported GO versions: supported-go-versions.md
+  - Examples: examples.md
 
 extra_css:
   - stylesheets/extra.css

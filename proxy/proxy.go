@@ -4,6 +4,8 @@ import (
 	"errors"
 	"reflect"
 	"unsafe"
+
+	"github.com/ovechkin-dm/go-dyno/pkg/dynoconfig"
 )
 
 type Stringer interface {
@@ -15,11 +17,12 @@ const (
 	StringerFieldName = "Stringer"
 	DummyField        = "dummy"
 	MethodsFieldName  = "Methods"
+	ConfigField       = "Config"
 )
 
 const DynamicProxyName = "DynamicProxy"
 
-func Create[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value) (T, error) {
+func Create[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value, cfg *dynoconfig.Config) (T, error) {
 	ifaceInstance := new(T)
 	v := reflect.ValueOf(ifaceInstance).Elem()
 	if v.Type().Kind() != reflect.Interface {
@@ -48,12 +51,18 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 			Anonymous: false,
 			PkgPath:   v.Type().PkgPath(),
 		},
+		{
+			Name:      ConfigField,
+			Type:      reflect.TypeOf(cfg),
+			Anonymous: false,
+			PkgPath:   reflect.TypeOf(cfg).PkgPath(),
+		},
 	})
 
 	s := reflect.New(tp).Elem()
 	numMethods := s.NumMethod()
-
 	smethods := make([]unsafe.Pointer, numMethods)
+	s.FieldByName(ConfigField).Set(reflect.ValueOf(cfg))
 	s.FieldByName(MethodsFieldName).Set(reflect.ValueOf(&smethods))
 
 	abiType := (*structTypeUncommon)(reflect.ValueOf(tp).UnsafePointer())
@@ -112,6 +121,22 @@ func createMethod(
 	rv := reflect.MakeFunc(ftype, hf)
 	ptr := (*refValue)(unsafe.Pointer(&rv))
 	return ptr.ptr
+}
+
+func GetConfig(value any) (*dynoconfig.Config, error) {
+	v := reflect.ValueOf(value)
+	if v.Kind() != reflect.Struct {
+		return nil, errors.New("value must be a struct")
+	}
+	configField := v.FieldByName(ConfigField)
+	if !configField.IsValid() {
+		return nil, errors.New("config field not found")
+	}
+	result, ok := configField.Interface().(*dynoconfig.Config)
+	if !ok {
+		return nil, errors.New("config field is not of type *dynoconfig.Config")
+	}
+	return result, nil
 }
 
 func StringRepr() string {

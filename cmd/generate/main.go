@@ -79,7 +79,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer mg.Close()
+	defer func() {
+		_ = mg.Close()
+	}()
 
 	err = goT.Execute(mg, make([]struct{}, *num))
 	if err != nil {
@@ -88,7 +90,9 @@ func main() {
 
 	amdasmT := template.Must(template.New("").Funcs(funcMap).Parse(asmTemplate))
 	ag2, _ := os.Create("./proxy/asm_amd64.s")
-	defer ag2.Close()
+	defer func() {
+		_ = ag2.Close()
+	}()
 	err = amdasmT.Execute(ag2, make([]struct{}, *num))
 	if err != nil {
 		panic(err)
@@ -96,7 +100,9 @@ func main() {
 
 	armasmT := template.Must(template.New("").Funcs(funcMap).Parse(armTemplate))
 	ag3, _ := os.Create("./proxy/asm_arm64.s")
-	defer ag3.Close()
+	defer func() {
+		_ = ag3.Close()
+	}()
 	err = armasmT.Execute(ag3, make([]struct{}, *num))
 	if err != nil {
 		panic(err)

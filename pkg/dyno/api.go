@@ -13,16 +13,16 @@ func Dynamic[T any](handler func(m reflect.Method, values []reflect.Value) []ref
 	cfg := dynoconfig.Config{}
 	for _, opt := range opts {
 		opt(&cfg)
-	}		
+	}
 	return proxy.Create[T](func(m reflect.Method, values []reflect.Value) []reflect.Value {
 		return handler(m, values)
 	}, &cfg)
 }
 
-func UnwrapPayload(v any) (any, error){
-	  cfg, err := proxy.GetConfig(v)
-	  if err != nil {
-		  return nil, err
-	  }	
-	  return cfg.Payload, nil
+func UnwrapPayload(v any) (any, error) {
+	cfg, err := proxy.GetConfig(v)
+	if err != nil {
+		return nil, err
+	}
+	return cfg.Payload, nil
 }

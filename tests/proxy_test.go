@@ -119,3 +119,18 @@ func TestStackAlign(t *testing.T) {
 		t.FailNow()
 	}
 }
+
+func TestCreateByType(t *testing.T) {
+	tp := reflect.ValueOf(new(Foo)).Elem().Type()
+	proxy, err := dyno.DynamicByType(func(m reflect.Method, values []reflect.Value) []reflect.Value {
+		return []reflect.Value{reflect.ValueOf("Hello")}
+	}, tp)
+	if err != nil {
+		t.Fatal(err)
+	}
+	foo := proxy.(Foo)
+	s := foo.Bar()
+	if s != "Hello" {
+		t.Fatalf("Expected 'Hello', got '%s'", s)
+	}
+}

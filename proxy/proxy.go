@@ -22,11 +22,9 @@ const (
 
 const DynamicProxyName = "DynamicProxy"
 
-func Create[T any](handler func(m reflect.Method, values []reflect.Value) []reflect.Value, cfg *dynoconfig.Config) (T, error) {
-	ifaceInstance := new(T)
-	v := reflect.ValueOf(ifaceInstance).Elem()
-	if v.Type().Kind() != reflect.Interface {
-		return *ifaceInstance, errors.New("cannot create proxy for non-interface type")
+func Create(handler func(m reflect.Method, values []reflect.Value) []reflect.Value, cfg *dynoconfig.Config, t reflect.Type) (any, error) {
+	if t.Kind() != reflect.Interface {
+		return nil, errors.New("cannot create proxy for non-interface type")
 	}
 
 	tp := reflect.StructOf([]reflect.StructField{
@@ -37,7 +35,7 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 		},
 		{
 			Name:      DelegateFieldName,
-			Type:      reflect.ValueOf(ifaceInstance).Elem().Type(),
+			Type:      t,
 			Anonymous: true,
 		},
 		{
@@ -47,9 +45,9 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 		},
 		{
 			Name:      DummyField,
-			Type:      reflect.ValueOf(ifaceInstance).Elem().Type(),
+			Type:      t,
 			Anonymous: false,
-			PkgPath:   v.Type().PkgPath(),
+			PkgPath:   t.PkgPath(),
 		},
 		{
 			Name:      ConfigField,
@@ -77,7 +75,7 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 			curMethod.Tfn = offset
 			curMethod.Ifn = offset
 		} else {
-			method := createMethod(s, v, handler, i)
+			method := createMethod(s, t, handler, i)
 			smethods[i] = method
 			offset := resolveReflectText(methods[i])
 			curMethod.Tfn = offset
@@ -85,13 +83,13 @@ func Create[T any](handler func(m reflect.Method, values []reflect.Value) []refl
 		}
 
 	}
-	result := s.Interface().(T)
+	result := s.Interface()
 	return result, nil
 }
 
 func createMethod(
 	structOfProxy reflect.Value,
-	sourceInterface reflect.Value,
+	sourceType reflect.Type,
 	handler func(m reflect.Method, values []reflect.Value) []reflect.Value,
 	num int,
 ) unsafe.Pointer {
@@ -110,7 +108,7 @@ func createMethod(
 	}
 	ftype := reflect.FuncOf(inArgs, outArgs, tp.IsVariadic())
 	methodName := structOfProxy.Type().Method(num).Name
-	methodType, ok := sourceInterface.Type().MethodByName(methodName)
+	methodType, ok := sourceType.MethodByName(methodName)
 	if !ok {
 		methodType = structOfProxy.Type().Method(num)
 	}

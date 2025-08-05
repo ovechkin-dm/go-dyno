@@ -2,9 +2,10 @@ package proxy
 
 import (
 	"errors"
+	"fmt"
 	"reflect"
 	"unsafe"
-
+	"sync/atomic"
 	"github.com/ovechkin-dm/go-dyno/pkg/dynoconfig"
 )
 
@@ -15,18 +16,19 @@ type Stringer interface {
 const (
 	DelegateFieldName = "Delegate"
 	StringerFieldName = "Stringer"
-	DummyField        = "dummy"
 	MethodsFieldName  = "Methods"
 	ConfigField       = "Config"
 )
 
 const DynamicProxyName = "DynamicProxy"
 
-func Create(handler func(m reflect.Method, values []reflect.Value) []reflect.Value, cfg *dynoconfig.Config, t reflect.Type) (any, error) {
+var counter atomic.Int64
+
+func Create(handler func(m reflect.Method, values []reflect.Value) []reflect.Value, cfg *dynoconfig.Config, t reflect.Type) (any, error) {	
 	if t.Kind() != reflect.Interface {
 		return nil, errors.New("cannot create proxy for non-interface type")
 	}
-
+	dummyFieldName := createUniqueDummyFieldName()
 	tp := reflect.StructOf([]reflect.StructField{
 		{
 			Name:      MethodsFieldName,
@@ -44,7 +46,7 @@ func Create(handler func(m reflect.Method, values []reflect.Value) []reflect.Val
 			Anonymous: true,
 		},
 		{
-			Name:      DummyField,
+			Name:      dummyFieldName,
 			Type:      t,
 			Anonymous: false,
 			PkgPath:   t.PkgPath(),
@@ -139,4 +141,10 @@ func GetConfig(value any) (*dynoconfig.Config, error) {
 
 func StringRepr() string {
 	return DynamicProxyName
+}
+
+// `New` method in go returns cached dynamic struct type if fields are the same, so to avoid it, we add a unique field name on each `StructOf` call
+func createUniqueDummyFieldName() string {
+	newval := counter.Add(1)
+	return fmt.Sprintf("dummy%d", newval)
 }

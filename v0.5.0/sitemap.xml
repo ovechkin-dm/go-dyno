@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ovechkin-dm.github.io/go-dyno/latest/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>https://ovechkin-dm.github.io/go-dyno/latest/examples/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>https://ovechkin-dm.github.io/go-dyno/latest/internals/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>https://ovechkin-dm.github.io/go-dyno/latest/limitations/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
     <url>
          <loc>https://ovechkin-dm.github.io/go-dyno/latest/supported-go-versions/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-08-05</lastmod>
     </url>
 </urlset>

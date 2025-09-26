@@ -97,7 +97,7 @@ func createMethod(
 ) unsafe.Pointer {
 	methodValue := structOfProxy.Method(num)
 	tp := methodValue.Type()
-	receiverType := reflect.TypeOf(reflect.TypeOf(0))
+	receiverType := reflect.TypeOf(0)
 	receiverArgOffsetType := reflect.TypeOf([FramePointerOffset]int{})
 	inArgs := []reflect.Type{receiverType, receiverArgOffsetType}
 	outArgs := make([]reflect.Type, 0)
